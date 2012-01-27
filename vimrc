@@ -7,6 +7,13 @@ call pathogen#runtime_append_all_bundles()
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
+let mapleader=","                 " change the mapleader from \ to ,
+
+" Flag certain files as certain language files
+autocmd BufRead,BufNewFile {Rakefile,Gemfile,config.ru,Vagrantfile,Thorfile} set ft=ruby
+
+nnoremap ; :
+
 set history=1000
 set undolevels=1000
 
