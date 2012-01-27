@@ -1,5 +1,9 @@
 set nocompatible                  " Must come first because it changes other options.
 
+filetype off
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
