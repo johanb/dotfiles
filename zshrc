@@ -25,12 +25,16 @@ source "$ZSH/oh-my-zsh.sh"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler brew git-flow github heroku pow powder cucumber rspec)
+plugins=(git bundler brew git-flow cloudapp github heroku pow powder cucumber rspec)
 
 # Set the definite PATH
+
 export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # use .local_zshrc for settings specific to one system
 [[ -f ~/.local_zshrc ]] && . ~/.local_zshrc
 
 eval "$(rbenv init -)"
+
+eval "$(hub alias -s)"
